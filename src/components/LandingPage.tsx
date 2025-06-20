@@ -46,70 +46,73 @@ const LandingPage: React.FC<LandingPageProps> = ({
         {/* Hero Section */}
         <section className="hero-section">
           <h1 className="hero-title">
-            Write Better,<br />
-            Write Smarter
+            Master College Essays<br />
+            as an <span>ESL Student</span>
           </h1>
           <p className="hero-description">
-            Get real-time grammar suggestions, spelling corrections, and style 
-            improvements powered by advanced AI. Whether you're a student, professional, or 
-            content creator, WordWise AI helps you craft perfect text every time.
+            The only AI writing assistant built specifically for ESL students. Get grammar corrections 
+            <em> with clear explanations</em> to learn English patterns, vocabulary upgrades that sound natural, 
+            and sentence clarity improvements that make your ideas shine. Transform your essays from good to exceptional.
           </p>
         </section>
 
         {/* Call-to-Action Cards */}
         <section className="cta-section">
           <div className="cta-card" onClick={onViewDemo}>
-            <span className="card-icon">🚀</span>
-            <h3 className="card-title">Try the Demo</h3>
+            <span className="card-icon">🎓</span>
+            <h3 className="card-title">Try ESL Demo</h3>
             <p className="card-description">
-              Experience WordWise AI instantly without creating an account
+              See how WordWise fixes common ESL errors and explains the grammar rules
             </p>
             <button className="btn-cta primary">
-              View Demo
+              Try Demo
             </button>
           </div>
           
-          <div className="cta-card" onClick={onMyDocuments}>
-            <span className="card-icon">📁</span>
-            <h3 className="card-title">My Documents</h3>
-            <p className="card-description">
-              Access your saved documents and writing projects
-            </p>
-            <button className="btn-cta secondary">
-              My Documents
-            </button>
-          </div>
+                      <div className="cta-card" onClick={onMyDocuments}>
+              <span className="card-icon">📚</span>
+              <h3 className="card-title">My Documents</h3>
+              <p className="card-description">
+                Access your saved college essays and track your writing progress
+              </p>
+              <button className="btn-cta secondary">
+                My Documents
+              </button>
+            </div>
         </section>
 
         {/* Features Section */}
         <section className="features-section">
-          <h2 className="features-title">Why Choose WordWise AI?</h2>
+          <h2 className="features-title">Built for ESL College Writers</h2>
           <p className="features-subtitle">
-            Powerful AI-driven features designed to elevate your writing
+            "I want to understand <em>why</em> my grammar is wrong, not just get it fixed" - Real ESL student feedback
           </p>
           
           <div className="features-grid">
             <div className="feature-card">
+              <span className="feature-icon">📖</span>
+              <h4 className="feature-title">Grammar Coach</h4>
+              <p className="feature-description">
+                <strong>"I want grammar corrections with explanations so I can learn English patterns"</strong><br/>
+                Every correction comes with a clear explanation of the grammar rule, helping you learn, not just fix.
+              </p>
+            </div>
+            
+            <div className="feature-card">
               <span className="feature-icon">🎯</span>
-              <h4 className="feature-title">Smart Suggestions</h4>
+              <h4 className="feature-title">Vocabulary Booster</h4>
               <p className="feature-description">
-                Get contextual writing improvements that understand your intent
+                <strong>"I want vocabulary suggestions to use more advanced words appropriately"</strong><br/>
+                Get academic-level word suggestions that fit your context and sound natural to native speakers.
               </p>
             </div>
             
             <div className="feature-card">
-              <span className="feature-icon">⚡</span>
-              <h4 className="feature-title">Real-time Analysis</h4>
+              <span className="feature-icon">💡</span>
+              <h4 className="feature-title">Clarity Enhancer</h4>
               <p className="feature-description">
-                See suggestions as you type with instant feedback
-              </p>
-            </div>
-            
-            <div className="feature-card">
-              <span className="feature-icon">🔒</span>
-              <h4 className="feature-title">Secure & Private</h4>
-              <p className="feature-description">
-                Your documents are protected with enterprise-grade security
+                <strong>"I want clarity improvements to make my ideas easier to understand"</strong><br/>
+                Transform complex, tangled sentences into clear, powerful statements that professors love.
               </p>
             </div>
           </div>
@@ -120,7 +123,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
       <footer className="landing-footer">
         <div className="footer-content">
           <div className="footer-copyright">
-            © 2024 WordWise AI. Empowering writers worldwide.
+            © 2024 WordWise AI. Empowering ESL students to excel in college writing.
           </div>
           <div className="footer-links">
             <button className="footer-link" onClick={onPrivacy}>Privacy</button>

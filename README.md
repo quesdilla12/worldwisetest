@@ -166,6 +166,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ by Abdullah**
-
 ⭐ Star this repo if you found it helpful!

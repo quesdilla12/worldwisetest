@@ -17,6 +17,12 @@ export interface User {
   photoURL?: string;
   userType: 'student' | 'professional' | 'creator';
   niche: string;
+  writingGoals: string[];
+  preferences: {
+    analysisLevel: 'basic' | 'detailed' | 'comprehensive';
+    focusAreas: ('grammar' | 'spelling' | 'style' | 'clarity')[];
+    targetAudience: 'academic' | 'professional' | 'casual' | 'creative';
+  };
   createdAt: Date;
   updatedAt: Date;
 }
@@ -175,6 +181,12 @@ const createOrUpdateUser = async (firebaseUser: FirebaseUser): Promise<User> => 
         name: firebaseUser.displayName || 'User',
         userType: 'student', // Default
         niche: 'General writing', // Default
+        writingGoals: ['Improve grammar', 'Enhance clarity', 'Write more confidently'],
+        preferences: {
+          analysisLevel: 'detailed',
+          focusAreas: ['grammar', 'spelling', 'style', 'clarity'],
+          targetAudience: 'academic'
+        },
         createdAt: new Date(),
         updatedAt: new Date()
       };

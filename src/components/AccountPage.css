@@ -1,0 +1,552 @@
+.account-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #f5f5f5;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.account-header {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+.account-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.account-header p {
+  color: #888;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.back-button {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.account-tabs {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 2rem;
+}
+
+.account-tabs .tab {
+  background: none;
+  border: none;
+  color: #888;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.account-tabs .tab:hover {
+  color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.account-tabs .tab.active {
+  color: #4285f4;
+  border-bottom-color: #4285f4;
+  background: rgba(66, 133, 244, 0.1);
+}
+
+.account-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.account-section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #f5f5f5;
+}
+
+/* Profile Tab Styles */
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto 1rem;
+}
+
+.btn-avatar-change {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.profile-fields {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-group label {
+  font-weight: 600;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+
+.field-value {
+  color: #ccc;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+}
+
+.field-group small {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.profile-input, .profile-select, .profile-textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.profile-input:focus, .profile-select:focus, .profile-textarea:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.profile-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.profile-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-edit, .btn-save {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-edit:hover, .btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.btn-edit.active {
+  background: #666;
+}
+
+.account-stats {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.account-stats h4 {
+  margin: 0 0 1.5rem 0;
+  color: #f5f5f5;
+  font-size: 1.3rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.stat-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: #4285f4;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Preferences Tab Styles */
+.preferences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.preference-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.preference-card h4 {
+  margin: 0 0 1.5rem 0;
+  color: #f5f5f5;
+  font-size: 1.2rem;
+}
+
+.preference-group {
+  margin-bottom: 1.5rem;
+}
+
+.preference-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+.preference-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.focus-areas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-label, .toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+
+.checkbox-label input[type="checkbox"], .toggle-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4285f4;
+}
+
+/* Security Tab Styles */
+.security-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.security-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #f5f5f5;
+  font-size: 1.3rem;
+}
+
+.security-card p {
+  color: #888;
+  margin: 0 0 1.5rem 0;
+}
+
+.btn-change-password, .btn-enable-2fa {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.password-change-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+.security-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-cancel {
+  background: #666;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.login-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.login-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.login-location {
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+.login-time {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.login-status {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.login-status.current {
+  color: #34a853;
+  font-weight: 500;
+}
+
+/* Data Tab Styles */
+.data-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.data-card.danger {
+  border-color: rgba(244, 67, 54, 0.3);
+  background: rgba(244, 67, 54, 0.05);
+}
+
+.data-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #f5f5f5;
+  font-size: 1.3rem;
+}
+
+.data-card p {
+  color: #888;
+  margin: 0 0 1.5rem 0;
+}
+
+.btn-export {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.usage-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.usage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.usage-label {
+  color: #f5f5f5;
+}
+
+.usage-value {
+  color: #4285f4;
+  font-weight: 500;
+}
+
+.privacy-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .account-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .back-button {
+    top: 1.5rem;
+    left: 1rem;
+  }
+  
+  .account-tabs {
+    padding: 0 1rem;
+    overflow-x: auto;
+  }
+  
+  .account-tabs .tab {
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+  }
+  
+  .account-content {
+    padding: 1rem;
+  }
+  
+  .preferences-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+} 
